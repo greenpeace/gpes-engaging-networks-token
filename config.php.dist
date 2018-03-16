@@ -1,4 +1,5 @@
 <?php
 define('CACHE_FOLDER', '/home/tokenuser/token_site/token');
 define('ENGAGING_NETWORKS_API_KEY', 'efsdewr234dgfgerwe44334');
+define('ALLOW_ORIGIN_HEADER', '*');
 ?>
