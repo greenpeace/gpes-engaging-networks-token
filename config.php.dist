@@ -1,5 +1,11 @@
 <?php
-define('CACHE_FOLDER', '/home/tokenuser/token_site/token');
+
+// Absolote path to a folder where the server can write to. Slash in the begining and the end.
+define('CACHE_FOLDER', '/home/tokenuser/token_site/token/');
+
+// The Engaging Networks API key
 define('ENGAGING_NETWORKS_API_KEY', 'efsdewr234dgfgerwe44334');
+
+// Domain from where the script will be called. Use * for all domains.
 define('ALLOW_ORIGIN_HEADER', '*');
 ?>
