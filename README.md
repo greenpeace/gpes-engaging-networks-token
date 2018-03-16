@@ -1,8 +1,8 @@
 # Engagement Networks API 
 
-**This script provides an Engaging Networks Token to use when sending petition form information to Engaging Networks.** It was built as a simple API to be used by petition forms built outside Engaging Networks.
+**This script provides an Engaging Networks Token to be used when sending petition form data to Engaging Networks.** It was built as a simple API to be used by our petition forms that are built and coded outside Engaging Networks.
 
-It returns a json response with the Engaging Networks token and information saying if the token is new or cached.
+A Javascript call to `https://example.domain.org/gpes-engaging-networks-token/` returns a json response with the Engaging Networks token and information saying if the token is new or cached.
 
 ```json
 {
@@ -11,17 +11,20 @@ It returns a json response with the Engaging Networks token and information sayi
 }
 ```
 
-Please note the cache is needed because Engaging Networks will issue a max of 5,000 tokens per hour.
+Please note that the cache is needed because Engaging Networks will issue a max of 5,000 tokens per hour. This script will ask for a new token if the cached version is older than 5 minutes. This cache also reduces resource consumption both in Greenpeace and Engaging Network servers.
 
-The information about the token source (cache or engaging) is for debugging purposes only.
+The information in the json about the token source (cache or engaging) is for debugging purposes only.
 
 ## Install this script
 
-You'll need a **writable folder**, to act as a cache, and store the token value for a few minutes. This folder should be outside the server's path, for security reasons. Don’t forget to ensure the server can write in that folder.
+1. Rename `config.php.dist` to `config.php`
+2. Edit `config.php`:
+3. Modify the CACHE_FOLDER setting. You'll need a **writable folder**, to store the cache file with the token value. This folder should be outside the server's path, for extra security.
+4. Add the API key in the `ENGAGING_NETWORKS_API_KEY`setting.
+5. Finally configure the `ALLOW_ORIGIN_HEADER` with the domain name
+5. Upload `EngagingNetworksToken.php`, `index.php` and `config.php` to your server
 
-You’ll need to rename the file `config.php.dist` and add the API key and the folder absolute path.
-
-For security reasons the script needs to work in https.
+For security reasons the script should work from an https url
 
 ### config.php example
 
@@ -29,8 +32,8 @@ For security reasons the script needs to work in https.
 <?php
 define('CACHE_FOLDER', '/home/tokenuser/token_site/token');
 define('ENGAGING_NETWORKS_API_KEY', 'efsdewr234dgfgerwe44334');
+define('ALLOW_ORIGIN_HEADER', '*');
 ?>
 ```
-
 
 
