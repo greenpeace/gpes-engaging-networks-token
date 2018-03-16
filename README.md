@@ -7,13 +7,13 @@ It returns a json response with the Engaging Networks token and information sayi
 ```json
 {
     "token": "ewewrffdwrweerwew",
-    "cached": true 
+    "source": "cache" 
 }
 ```
 
 Please note the cache is needed because Engaging Networks will issue a max of 5,000 tokens per hour.
 
-The information about new/cached tokens is for debugging purposes only.
+The information about the token source (cache or engaging) is for debugging purposes only.
 
 ## Install this script
 
