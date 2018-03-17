@@ -6,6 +6,6 @@ define('CACHE_FOLDER', '/home/tokenuser/token_site/token/');
 // The Engaging Networks API key
 define('ENGAGING_NETWORKS_API_KEY', 'efsdewr234dgfgerwe44334');
 
-// Domain from where the script will be called. Use * for all domains.
+// Domain from where the script will be called. Use * for all domains during development but add a value in production.
 define('ALLOW_ORIGIN_HEADER', '*');
 ?>

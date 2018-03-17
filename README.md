@@ -36,4 +36,6 @@ define('ALLOW_ORIGIN_HEADER', '*');
 ?>
 ```
 
+## To do:
 
+* Create a ALLOW_ORIGIN_HEADER setting that will allow to use the same API endpoint for multiple domains without adding `Access-Control-Allow-Origin: *` as a header.
