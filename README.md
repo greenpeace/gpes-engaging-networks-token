@@ -1,6 +1,8 @@
 # Engagement Networks API 
 
-**This script provides an Engaging Networks Token to be used when sending petition form data to Engaging Networks.** It was built as a simple API to be used by our petition forms that are built and coded outside Engaging Networks.
+**This script provides an Engaging Networks Token to be used when sending petition form data to Engaging Networks.** 
+
+It was built as a simple API to be used by our petition forms that are built and coded outside Engaging Networks. It's just a PHP class without dependencies, frontend code or output. Being so simple it can be used in sites with different frontend settings.
 
 A Javascript call to `https://example.domain.org/gpes-engaging-networks-token/` returns a json response with the Engaging Networks token and information saying if the token is new or cached.
 
